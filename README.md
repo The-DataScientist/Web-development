@@ -1,1 +1,1 @@
-# Web-development
+With a little knowledge in the field of web development, I tried to create a simple static website whose theme is about Junior Enterprise ESSAI. In fact, to create this site, I was based on the 3 main tools which are HTML5, CSS3 and JAVASCRIPT.
