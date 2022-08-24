@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Acceuil</title>
+	<link rel="stylesheet" type="text/css" href="css.css">
+
+</head>
+<body>
+
+	<header>
+		<img src="JEE.png" width="200" height="200">
+		<img src="at.png" width="1250" height="200">
+	</header>
+
+	<nav>
+		<ul>
+			<a href="junior.html" target="_blank">Acceuil</a>
+			<a href="Members.html" target="_blank">Membres</a>           
+			<a href="Projet.html" target="_blank">Projets</a>			
+		</ul>
+	</nav>
+	
+
+	<form method="post" action="/ma-page-de-traitement" method="post">
+    <div>
+        <label for="name">Nom :</label>
+        <input type="text" id="name" name="user_name" required>
+    </div>
+        <div>
+        <label for="name">Prénom :</label>
+        <input type="text" id="name2" name="user_name" required>
+        <span id="missPrenom"></span>
+    </div>
+    <div>
+        <label for="mail">e-mail :</label>
+        <input type="email" id="mail" name="user_mail" required>
+    </div>
+    <div>
+        <label for="msg">Message :</label>
+        <textarea id="msg" name="user_message"></textarea>
+    </div>
+        <div class="button">
+        <input type="button" name="bouton" id="bouton" value='Valider' onclick="this.value='Infos envoyé'">
+    </div>
+</form>
+
+ <script>
+            var formValid = document.getElementById('bouton');
+            var prenom = document.getElementById('name2');
+            var missPrenom = document.getElementById('missPrenom');
+            var prenomValid = /^[a-zA-ZéèîïÉÈÎÏ][a-zéèêàçîï]+([-'\s][a-zA-ZéèîïÉÈÎÏ][a-zéèêàçîï]+)?$/;
+            
+            formValid.addEventListener('click', validation);
+            
+            function validation(event){
+                //Si le champ est vide
+                if (prenom.validity.valueMissing){
+                    event.preventDefault();
+                    missPrenom.textContent = 'Prénom manquant';
+                    missPrenom.style.color = 'red';
+                //Si le format de données est incorrect
+                }else if (prenomValid.test(prenom.value) == false){
+                    event.preventDefault();
+                    missPrenom.textContent = 'Format incorrect';
+                    missPrenom.style.color = 'orange';
+                }else{ 
+                }
+            }
+        </script>
+	<h1>C'EST  QUOI  LA  JUNIOR  ENTREPRISE ?</h1>
+	<P>
+		Les Junior-Entreprises (J.E.) sont des associations à vocation économique et pédagogique, à but non lucratif1. Associations étudiantes implantées dans les établissements d’enseignement supérieur,<br> les Junior-Entreprises se définissent comme un vecteur d’employabilité et d’engagement des étudiants. En leur permettant de mettre en pratique l’enseignement théorique qu’ils reçoivent,<br> les Junior-Entreprises constituent une passerelle entre les études et l’entreprise, au service de l’insertion professionnelle des étudiants.<br>
+		Ainsi, elles proposent des services aux entreprises et permettent aux étudiants de mettre en pratique leurs savoirs en répondant aux besoins de clients variés : grands groupes, ETI, PME, TPE, administration ou particulier.
+	</P>
+
+	<h1>JUNIOR ENTREPRISE ESSAI :</h1>
+	<P>
+		L'ESSAI est l'unique école d'ingénieur publiqur en Tunisie qui forme des ingénieurs statisticiens.<br> Le champ d'application de la statistiqueest immense, et puisque l'ESSAI Junior Entreprise est l'unique association qui est spécialisé dans le domaine de data science, on est habilités à travailler dans ces domaines :
+		<ul>
+			<li>Economie</li>
+			<li>Industrie</li>
+			<li>Finace & Actuariat</li>
+		</ul>
+	</P>
+
+
+
+	<footer>
+		<ul>
+			<P>
+				SUIVEZ NOUS 
+				<ul>
+					<LI> <a href="https://www.facebook.com/Essai.Junior.Entreprise" target="_blank">FACEBOOK</a></LI>
+					<LI> <a href="https://www.instagram.com/junior_essai/" target="_blank">INSTAGRM</a></LI>
+					<LI> <a href="https://www.linkedin.com/company/essai-junior-entreprise/" target="_blank">LINKEDIN</a></LI>
+				</ul>
+			</P>          
+			<P>
+				LANGUE 
+				<ul>
+					<LI> <a href="Junior1.html" target="_blank">ANGLAIS</a></LI>
+					<LI> <a href="Junior.html"  target="_blank">FRANçAIS</a></LI>
+				</ul>
+			</P>  
+			<P>
+				NAVIGATION 
+				<ul>
+					<LI><a href="junior.html"     target="_blank">Acceuil</a></LI>
+					<LI><a href="Members.html"    target="_blank">Membres</a></LI>           
+					<LI><a href="Projet.html"     target="_blank">Projets</a></LI>			
+				</ul>
+			</P>
+			
+			<P>Powered with love By " ESSAI Junior Entreprise "</P>	
+			<P>Creéateur : Khalil Hajji</P>		
+			<P>Copyright © 2020 JUNIOR ®</P>
+		</ul>
+	</footer>
+
+</body>
+</html>
